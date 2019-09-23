@@ -13,10 +13,22 @@ public class HelloTest extends TestCase {
         resultat = Hello.getHelloNavn("€£#@@!");
         assertEquals("Hello €£#@@!!", resultat);
 
+
+    }
+
+    public void testGetHelloNavnSpace() {
+        String resultat;
         resultat = Hello.getHelloNavn(" ");
         assertEquals("Hello!", resultat);
 
         resultat = Hello.getHelloNavn("   Matias   ");
         assertEquals("Hello Matias!", resultat);
+
+    }
+
+    public void testGetHelloNavnSymbol() {
+        String resultat;
+        resultat = Hello.getHelloNavn("€£#@@!");
+        assertEquals("Hello €£#@@!!", resultat);
     }
 }
